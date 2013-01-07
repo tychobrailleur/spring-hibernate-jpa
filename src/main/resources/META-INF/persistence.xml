@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence>
+    <persistence-unit name="DemoPU" transaction-type="JTA">
+        <description>This persistence unit is used for the demo.</description>
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <jta-data-source>jdbc/DemoPool</jta-data-source>
+        <properties>
+            <property name="hibernate.transaction.jta.platform" 
+                      value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform" />
+        </properties>
+<!--        <class>com.mycompany.coredev.model.Screen</class>
+        <class>com.mycompany.coredev.model.Section</class>
+        <class>com.mycompany.coredev.model.Field</class>-->
+    </persistence-unit>
+</persistence>
